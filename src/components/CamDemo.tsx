@@ -47,7 +47,12 @@ function CamDemo() {
 
   return (
     <div className="cam-container">
-      {show404 && <div>404</div>}
+      {show404 && (
+        <div>
+          {currentCam.name} {currentCam.url} 404
+        </div>
+      )}
+      {/* below did not work for some reason */}
       {/* {!show404 && <video ref={videoRef}></video>} */}
       <video className={clsx({ none: show404 })} ref={videoRef}></video>
     </div>
