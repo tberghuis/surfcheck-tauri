@@ -10,3 +10,10 @@ state management
   zustand
 
 keybinding ctrl+r refresh
+
+cam width 100%
+
+look issues and all code of surfcheck-electron
+
+tauri build a binary for distribution
+  install start menu
