@@ -1,15 +1,14 @@
-
-import CamDemo from "./components/CamDemo"
+import CamDemo from "./components/CamDemo";
+import CamList from "./components/CamList";
+import "./App.css";
 
 function App() {
-
-
   return (
     <div className="App">
-      hello world
+      <CamList></CamList>
       <CamDemo></CamDemo>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
