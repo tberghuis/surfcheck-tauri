@@ -19,3 +19,5 @@ tauri build a binary for distribution
   install start menu
 
 r / reactjs
+
+404

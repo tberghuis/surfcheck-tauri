@@ -1,8 +1,9 @@
 .cam-list {
-  min-width: 200px;
+  width: 200px;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  min-height: 100vh;
 }
 
 .cam-list button {
