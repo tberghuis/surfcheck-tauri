@@ -6,9 +6,15 @@
   bottom: 0;
   left: 200px;
   display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 
 video {
   width: 100%;
+}
+
+.none {
+  display: none;
 }

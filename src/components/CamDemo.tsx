@@ -1,9 +1,13 @@
-import { useRef, useEffect } from "react";
+import { useRef, useEffect, useState } from "react";
 import Hls from "hls.js";
 import { useStore } from "../store";
 import "../css/cam-container.css";
+import axios from "axios";
+import clsx from "clsx";
 
 function CamDemo() {
+  const [show404, setShow404] = useState(false);
+
   const currentCam = useStore((state) => state.currentCam);
 
   const videoRef = useRef<HTMLVideoElement>(null);
@@ -18,11 +22,34 @@ function CamDemo() {
 
     hls.loadSource(currentCam.url);
     videoRef.current && hls.attachMedia(videoRef.current);
+  }, [currentCam, videoRef.current]);
+
+  useEffect(() => {
+    let isSubscribed = true;
+    const checkHLSActive = async () => {
+      try {
+        let res = await axios.head(currentCam.url);
+        console.log("checkHLSActive", res.status);
+        return /2\d\d/.test("" + res.status);
+      } catch (err) {
+        console.log("checkHLSActive err", currentCam.url, err);
+        if (isSubscribed) {
+          setShow404(true);
+        }
+      }
+    };
+    checkHLSActive();
+    return () => {
+      isSubscribed = false;
+      setShow404(false);
+    };
   }, [currentCam]);
 
   return (
     <div className="cam-container">
-      <video ref={videoRef}></video>
+      {show404 && <div>404</div>}
+      {/* {!show404 && <video ref={videoRef}></video>} */}
+      <video className={clsx({ none: show404 })} ref={videoRef}></video>
     </div>
   );
 }
