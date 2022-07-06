@@ -4,10 +4,10 @@ import { cams } from "../data/cams";
 function CamList() {
   return (
     <div className="cam-list">
-      {cams.map((beach) => {
+      {cams.map((cam) => {
         return (
-          <div key={beach.name}>
-            <button>{beach.name}</button>
+          <div key={cam.name}>
+            <button>{cam.name}</button>
           </div>
         );
       })}
