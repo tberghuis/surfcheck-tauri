@@ -54,6 +54,7 @@ function CamDemo() {
       )}
       {/* below did not work for some reason */}
       {/* {!show404 && <video ref={videoRef}></video>} */}
+      {!show404 && <div>{currentCam.name}</div>}
       <video className={clsx({ none: show404 })} ref={videoRef}></video>
     </div>
   );

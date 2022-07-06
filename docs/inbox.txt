@@ -1,0 +1,6 @@
+figure out why appimage does not run
+  try different distro
+
+get cross platform build running as github action
+
+github readme
