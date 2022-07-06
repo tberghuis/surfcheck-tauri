@@ -1,4 +1,4 @@
-tailwind
+tailwind... meh
 copy functionality of surfcheck electron
 tauri docs
 
@@ -7,3 +7,6 @@ camlist
   types
 
 state management
+  zustand
+
+keybinding ctrl+r refresh
