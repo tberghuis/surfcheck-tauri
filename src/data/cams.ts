@@ -1,9 +1,12 @@
-interface Beach {
+export interface Cam {
   name: string;
   url: string;
 }
 
-export const cams: Beach[] = [
+
+// todo load from json
+
+export const cams: Cam[] = [
   {
     name: "seaway",
     url: "https://cams.cdn-surfline.com/cdn-au/au-seaway/playlist.m3u8",

@@ -1,7 +1,10 @@
 import { useRef, useEffect } from "react";
 import Hls from "hls.js";
+import { useStore } from "../store";
 
 function CamDemo() {
+  const currentCam = useStore((state) => state.currentCam);
+
   const videoRef = useRef<HTMLVideoElement>(null);
 
   useEffect(() => {
@@ -10,9 +13,7 @@ function CamDemo() {
     hls.on(Hls.Events.MANIFEST_PARSED, function () {
       videoRef.current && videoRef.current.play();
     });
-    hls.loadSource(
-      "https://cams.cdn-surfline.com/cdn-au/au-lennoxhead/playlist.m3u8"
-    );
+    hls.loadSource(currentCam.url);
     videoRef.current && hls.attachMedia(videoRef.current);
   }, []);
 
