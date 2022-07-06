@@ -4,3 +4,5 @@ figure out why appimage does not run
 get cross platform build running as github action
 
 github readme
+
+design icon
