@@ -6,7 +6,7 @@ function CamList() {
     <div className="cam-list">
       {cams.map((beach) => {
         return (
-          <div>
+          <div key={beach.name}>
             <button>{beach.name}</button>
           </div>
         );
