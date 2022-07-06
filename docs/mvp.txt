@@ -1,13 +1,7 @@
 
-copy functionality of surfcheck electron
 tauri docs
+ create distributable binary
 
-camlist
-  flexbox col
-  types
-
-state management
-  zustand
 
 keybinding ctrl+r refresh
 
@@ -21,3 +15,8 @@ tauri build a binary for distribution
 r / reactjs
 
 404
+
+github readme
+github public
+
+beach title... inbox.txt
