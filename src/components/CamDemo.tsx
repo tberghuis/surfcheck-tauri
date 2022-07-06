@@ -1,6 +1,7 @@
 import { useRef, useEffect } from "react";
 import Hls from "hls.js";
 import { useStore } from "../store";
+import "../css/cam-container.css";
 
 function CamDemo() {
   const currentCam = useStore((state) => state.currentCam);
@@ -20,8 +21,7 @@ function CamDemo() {
   }, [currentCam]);
 
   return (
-    <div>
-      hello CamDemo
+    <div className="cam-container">
       <video ref={videoRef}></video>
     </div>
   );
