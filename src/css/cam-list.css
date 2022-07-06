@@ -1,3 +1,7 @@
 .cam-list {
   min-width: 300px;
 }
+
+.cam-list button {
+  width: 100%;
+}

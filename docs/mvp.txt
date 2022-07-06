@@ -5,4 +5,5 @@ tauri docs
 camlist
   flexbox col
   types
-  
+
+state management
