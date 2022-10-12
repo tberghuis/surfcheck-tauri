@@ -6,3 +6,13 @@ get cross platform build running as github action
 github readme
 
 design icon
+
+ubuntu 22.04 vm
+install stuff
+checkout release branch
+try build appimage
+test
+
+
+merge release branch
+
